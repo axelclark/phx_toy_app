@@ -16,6 +16,8 @@ defmodule PhxToyApp.Web.Router do
   scope "/", PhxToyApp.Web do
     pipe_through :browser # Use the default browser stack
 
+    resources "/users", UserController
+    resources "/microposts", MicropostController
     get "/", PageController, :index
   end
 
